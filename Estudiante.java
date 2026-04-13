@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class Estudiante {
     String nombre;
     int edad;
@@ -22,11 +25,31 @@ public class Estudiante {
         this.curso = curso;
     }
 
+    //Metodo por consola
+    void ingresarInfo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("##INGRESE DATOS DEL ESTUDIANTE##");
+        System.out.println("Nombre: ");
+        this.nombre = sc.nextLine();
+        System.out.println("Edad: ");
+        this.edad = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Curso: ");
+        this.curso = sc.nextLine();
+        System.out.println("___________________");
+    }
+
     //Metodos
     void mostrarInfo(){
         System.out.println("Nombre: "+ nombre);
         System.out.println("Edad: "+ edad);
         System.out.println("Curso "+ curso);
         System.out.println("______________________");
+    }
+
+    //ToString
+    @Override
+    public String toString(){
+        return "Estudiante{nombre='"+nombre+"',edad="+edad+",curso='"+curso+"'}";
     }
 }

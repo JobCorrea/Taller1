@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Libro {
     String titulo;
     String autor;
@@ -24,4 +26,24 @@ public class Libro {
         System.out.println("Numero de paginas "+ numeroDePaginas);
         System.out.println("______________________________");
     }
+
+    //Metodo por consola
+    void ingresarInfo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("==INGRESE SUS DATOS DE LIBROS==");
+        System.out.println("Titulo: ");
+        this.titulo = sc.nextLine();
+        System.out.println("Autor: ");
+        this.autor = sc.nextLine();
+        System.out.println("Numero de paginas: ");
+        this.numeroDePaginas = sc.nextInt();
+        sc.nextLine();
+
+    }
+    
+    @Override
+    public String toString() {
+        return "Libro{titulo='" + titulo + "', autor='" + autor + "', paginas=" + numeroDePaginas + "}";
+    }
+
 }

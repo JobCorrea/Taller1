@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 public class CuentaBancaria {
     int numeroCuenta;
     int saldo;
@@ -24,11 +27,29 @@ public class CuentaBancaria {
         this.tipoDeCuenta = tipoDeCuenta;
     }
 
+    //metodo por consola
+    void ingresarInfo(){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Numero de Cuenta: ");
+        this.numeroCuenta = sc.nextInt();
+        System.out.println("Saldo: ");
+        this.saldo = sc.nextInt();
+        sc.nextLine();
+        System.out.println("Tipo de Cuenta: ");
+        this.tipoDeCuenta = sc.nextLine();
+        System.out.println("________________________");
+    }
+
      //Metodos
     void mostrarInfo(){
         System.out.println("Numero de cuenta: "+ numeroCuenta);
         System.out.println("Saldo: "+ saldo);
         System.out.println("Tipo de cuenta "+ tipoDeCuenta);
         System.out.println("______________________");
+    }
+
+    @Override 
+    public String toString(){
+        return "CuentaBancaria {Numero de Cuenta= '"+numeroCuenta+"',Saldo='"+saldo+"',Tipo de Cuenta='"+tipoDeCuenta+"'}";
     }
 }
