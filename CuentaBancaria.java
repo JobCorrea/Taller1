@@ -42,6 +42,7 @@ public class CuentaBancaria {
 
      //Metodos
     void mostrarInfo(){
+        System.out.println("$$ CUENTA BANCARIA $$");
         System.out.println("Numero de cuenta: "+ numeroCuenta);
         System.out.println("Saldo: "+ saldo);
         System.out.println("Tipo de cuenta "+ tipoDeCuenta);
