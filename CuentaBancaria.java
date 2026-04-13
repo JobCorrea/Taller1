@@ -23,4 +23,12 @@ public class CuentaBancaria {
         this.saldo = saldo;
         this.tipoDeCuenta = tipoDeCuenta;
     }
+
+     //Metodos
+    void mostrarInfo(){
+        System.out.println("Numero de cuenta: "+ numeroCuenta);
+        System.out.println("Saldo: "+ saldo);
+        System.out.println("Tipo de cuenta "+ tipoDeCuenta);
+        System.out.println("______________________");
+    }
 }

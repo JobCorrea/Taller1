@@ -22,5 +22,6 @@ public class Libro {
         System.out.println("Titulo: "+ titulo);
         System.out.println("Autor: "+ autor);
         System.out.println("Numero de paginas "+ numeroDePaginas);
+        System.out.println("______________________________");
     }
 }
